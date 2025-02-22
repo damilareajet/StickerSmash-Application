@@ -31,7 +31,7 @@ export default function Index() {
 
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
       quality: 1,
     });
@@ -123,20 +123,33 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#25292e',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   imageContainer: {
     flex: 1,
+    paddingTop: 50,
+    width: '100%',
+    alignItems: 'center',
   },
   footerContainer: {
     flex: 1 / 3,
     alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
   },
   optionsContainer: {
     position: 'absolute',
     bottom: 80,
+    width: '100%',
+    alignItems: 'center',
   },
   optionsRow: {
     alignItems: 'center',
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '80%',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    borderRadius: 20,
+    padding: 10,
   },
 });
